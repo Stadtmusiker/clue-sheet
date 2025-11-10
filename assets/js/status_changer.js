@@ -12,17 +12,6 @@ function statusButtonChanger (control) {
     index = 0
   }
   control.value = Data[index].value
-  const clue = $(control).closest('td').siblings('.guess-component') // eslint-disable-line no-undef
-  switch (Data[index].status) {
-    case 'x':
-      clue.toggleClass('x').siblings().removeClass('checked')
-      break
-    case 'checked':
-      clue.toggleClass('checked').siblings().removeClass('x')
-      break
-    default:
-      clue.removeClass('x checked')
-  }
 }
 
 // Attach function to all checkboxes
